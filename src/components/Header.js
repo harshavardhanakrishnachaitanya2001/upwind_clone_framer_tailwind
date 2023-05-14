@@ -1,10 +1,13 @@
 import React from "react";
 import logo from "../images/logo.png";
-import { motion } from "framer-motion";
+import { motion, useScroll,useTransform } from "framer-motion";
 
 const Header = () => {
+  const { scrollYProgress } = useScroll();
+  const backgroundColor = useTransform(scrollYProgress, [0, 0.1], ["", "#fff"]);
+  
   return (
-    <motion.div className="fixed z-50 top-0 flex w-full justify-evenly leading-6 px-3">
+    <motion.div style={{backgroundColor}} className="fixed z-50 top-0 flex w-full justify-evenly leading-6 px-3">
       <a
         href="https://www.google.com"
         className="font-bold text-2xl py-1 leading-[68px]"
@@ -19,6 +22,8 @@ const Header = () => {
         <ul className="flex space-x-8 text-white font-semibold text-sm bg">
           <motion.li
             className="cursor-pointer"
+            
+            
             onClick={() => {
               window.scrollTo({
                 top: 0,
@@ -36,12 +41,14 @@ const Header = () => {
                 .scrollIntoView({ behavior: "smooth" });
             }}
             className="cursor-pointer"
+            
             whileHover={{ color: "#ff5e14", transition: { ease: "easeInOut" } }}
           >
             DEMOS
           </motion.li>
           <motion.li
             className="cursor-pointer"
+            
             onClick={() => {
               document
                 .getElementById("featuresSection")
@@ -53,6 +60,7 @@ const Header = () => {
           </motion.li>
           <motion.li
             className="cursor-pointer"
+            
             whileHover={{ color: "#ff5e14", transition: { ease: "easeInOut" } }}
           >
             SUPPORT
