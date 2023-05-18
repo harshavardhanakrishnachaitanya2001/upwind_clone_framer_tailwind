@@ -13,7 +13,7 @@ const imageVariant = {
 };
 const Templates = () => {
   return (
-    <div className=" mt-[160px] text-center w-2/3 mx-auto">
+    <div className=" mt-[160px] text-center w-[60%] mx-auto">
       <div className="h-[54px] px-3" id="templatesSeciton">
         <h2 className=" mb-2 text-center font-bold tracking-widest text-xl">
           TEMPLATE DEMOS

@@ -18,7 +18,7 @@ const TemplateFeatures = () => {
         <div className='text-center px-3 h-14'>
             <h5 className='text-center font-semibold text-xl mb-2 tracking-wider'>TEMPLATE FEATURES</h5>
         </div>
-        <div className='grid grid-cols-3 gap-x-6 items-center w-2/3 mx-auto'>
+        <div className='grid grid-cols-3 gap-x-6 items-center w-[60%] mx-auto'>
 
             <motion.div variants = {hoverVariants} whileHover="addShadow" className='flex mt-6 w-full rounded-md border'>
                 <div className='flex items-center w-full p-3 rounded-lg

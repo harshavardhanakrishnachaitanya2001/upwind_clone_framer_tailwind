@@ -1,5 +1,5 @@
 import React from "react";
-import lightanddark from "../images/lightanddarkmodeimage.png";
+import RTLANDLTR from "../images/RTL&LTR.png";
 
 const RTLandLTR = () => {
   return (
@@ -9,7 +9,7 @@ const RTLandLTR = () => {
         </div>
       <div className="bg-gray-100 flex items-center p-12 justify-evenly text-left">
         <div className="px-3 w-full">
-          <img src={lightanddark} alt="" />
+          <img src={RTLANDLTR} alt="" />
         </div>
         <div className="space-y-2 px-3">
           <h1 className="font-semibold text-xl">RTL & LTR version</h1>
