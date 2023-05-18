@@ -10,7 +10,7 @@ const DarkandLight = () => {
         </h5>
       </div>
       <div className=" bg-gray-100 flex items-center p-12 justify-evenly">
-        <div className="text-left space-y-2 px-3">
+        <div className="text-left space-y-2 px-3 w-1/2">
           <h1 className="font-semibold text-2xl">Light and Dark version</h1>
           <p className="text-gray-400 text-xl">
             Upwind provides fully responsive a choice to choose Light & Dark
@@ -18,7 +18,7 @@ const DarkandLight = () => {
           </p>
         </div>
         <div className="px-3 w-full">
-          <img src={lightanddark} alt="" />
+          <img src={lightanddark} className="w-full" alt="" />
         </div>
       </div>
     </div>
