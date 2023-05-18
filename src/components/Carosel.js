@@ -1,8 +1,12 @@
 import React from "react";
 import icon from "../images/icon.png";
 import react from "../images/react.png";
+import tailwind from "../images/tailwind.png";
 import Header from "./Header";
 import { motion } from "framer-motion";
+import scss from '../images/scss.png'
+import css from '../images/css.png'
+import yarn from '../images/yarn.png'
 
 const iconVariant = {
   spinning: {
@@ -45,22 +49,22 @@ const Carosel = () => {
           </div>
 
           {/* Concepts links */}
-          <div className="relative mb-5">
-            <div className=" container pb-6 flex mx-auto justify-center w-full absolute text-center top-0 right-0 left-0">
-              <p>
+          <div className="relative pb-[50px]">
+            <div className=" container pb-[100px] flex mx-auto justify-center w-full absolute text-center top-0 right-0 left-0">
+              <p className="cursor-pointer" title="React JS">
                 <img src={react} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
               </p>
-              <p>
-                <img src={react} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+              <p className="cursor-pointer" title="Tailwind CSS">
+                <img src={tailwind} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
               </p>
-              <p>
-                <img src={react} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+              <p className="cursor-pointer" title="SAAS">
+                <img src={scss} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
               </p>
-              <p>
-                <img src={react} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+              <p className="cursor-pointer" title="CSS 3">
+                <img src={css} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
               </p>
-              <p>
-                <img src={react} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+              <p className="cursor-pointer" title="Yarn">
+                <img src={yarn} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
               </p>
             </div>
           </div>

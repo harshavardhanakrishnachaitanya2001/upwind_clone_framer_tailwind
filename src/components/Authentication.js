@@ -13,40 +13,42 @@ const imageVariants = {
 
 const Authentication = () => {
   return (
-    <div id="authenticationSection" className="mx-auto space-y-16">
-      <h1 className="text-center font-bold text-xl tracking-wider">
-        AUTHENTICATION PAGES
-      </h1>
-      <div className="w-1/2 grid text-center grid-cols-3 gap-5 mx-auto justify-content-center ">
-        <div className="w-full">
-          <motion.img
-            src={authentication}
-            variants = {imageVariants}
-            whileHover="moveUp"
-            alt=""
-            className="rounded-md w-full"
-          />
-          <p className="mt-6 font-semibold text-center"> LOGIN </p>
-        </div>
-        <div className="w-full">
-          <motion.img
-            src={authentication}
-            variants = {imageVariants}
-            whileHover="moveUp"
-            alt=""
-            className="rounded-md w-full"
-          />
-          <p className="mt-6 font-semibold text-center"> REGISTER </p>
-        </div>
+    <div id="authenticationSection">
+      <div className="h-[78px] px-3">
+        <h2 className=" mb-2 text-center font-bold tracking-widest text-xl">
+          AUTHENTICATION PAGES
+        </h2>
+      </div>
+      <div className="flex w-full mx-auto justify-center items-end h-[340px]">
         <div>
           <motion.img
             src={authentication}
             variants = {imageVariants}
             whileHover="moveUp"
             alt=""
-            className="rounded-md w-full"
+            className="rounded-md h-[244px] w-[356px] px-3"
           />
-          <p className="mt-6 font-semibold text-center"> FORGOT PASSWORD </p>
+          <p className="mt-6 font-semibold text-center"> LOGIN </p>
+        </div>
+        <div>
+          <motion.img
+            src="https://shreethemes.in/upwind_react/assets/images/demo/signup.png"
+            variants = {imageVariants}
+            whileHover="moveUp"
+            alt=""
+            className=" h-[244px] w-[356px] px-3 rounded-md"
+          />
+          <p className="mt-6 font-semibold text-center"> SIGN UP </p>
+        </div>
+        <div>
+          <motion.img
+            src="https://shreethemes.in/upwind_react/assets/images/demo/reset.png"
+            variants = {imageVariants}
+            whileHover="moveUp"
+            alt=""
+            className=" h-[244px] w-[356px] px-3 rounded-md"
+          />
+          <p className="mt-6 font-semibold text-center"> RESET PASSWORD </p>
         </div>
       </div>
     </div>

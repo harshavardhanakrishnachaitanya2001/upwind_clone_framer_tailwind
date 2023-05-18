@@ -3,11 +3,11 @@ import lightanddark from "../images/lightanddarkmodeimage.png";
 
 const RTLandLTR = () => {
   return (
-    <div className="space-y-16">
-      <h1 className="text-center px-3 mb-2 font-bold text-xl tracking-wider">
-        RTL & LTR
-      </h1>
-      <div className="w-1/2 mx-auto bg-gray-100 flex items-center p-12 justify-evenly">
+    <div className=" py-[100px]">
+      <div className='px-3 h-[78px]'>
+            <h5 className='font-semibold text-xl mb-2 tracking-wider'>RTL & LTR MODE</h5>
+        </div>
+      <div className="bg-gray-100 flex items-center p-12 justify-evenly text-left">
         <div className="px-3 w-full">
           <img src={lightanddark} alt="" />
         </div>
