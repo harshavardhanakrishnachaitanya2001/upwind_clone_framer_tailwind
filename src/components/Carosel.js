@@ -4,9 +4,9 @@ import react from "../images/react.png";
 import tailwind from "../images/tailwind.png";
 import Header from "./Header";
 import { motion } from "framer-motion";
-import scss from '../images/scss.png'
-import css from '../images/css.png'
-import yarn from '../images/yarn.png'
+import scss from "../images/scss.png";
+import css from "../images/css.png";
+import yarn from "../images/yarn.png";
 
 const iconVariant = {
   spinning: {
@@ -30,7 +30,7 @@ const Carosel = () => {
           <Header />
 
           {/* icon and text */}
-          <div className="flex justify-center items-center pt-72 pb-[180px]">
+          <div className="flex justify-center items-center pt-72 androidPhones:pb-[172px] lg:pb-[180px]">
             <div className="text-center text-white font-bold  leading-normal">
               <motion.img
                 variants={iconVariant}
@@ -49,22 +49,42 @@ const Carosel = () => {
           </div>
 
           {/* Concepts links */}
-          <div className="relative pb-[50px]">
-            <div className=" container pb-[100px] flex mx-auto justify-center w-full absolute text-center top-0 right-0 left-0">
+          <div className="relative lg:pb-[50px]">
+            <div className="androidPhones:border-b lg:border-none androidPhones:px-3 flex-wrap lg:px-0 androidPhones:py-6 lg:py-0 container lg:pb-[100px] flex mx-auto justify-center w-full absolute text-center top-0 right-0 left-0">
               <p className="cursor-pointer" title="React JS">
-                <img src={react} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+                <img
+                  src={react}
+                  alt=""
+                  className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg androidPhones:m-2 androidPhones:p-2 lg:p-0 lg:my-0 lg:mx-2 align-middle "
+                />
               </p>
               <p className="cursor-pointer" title="Tailwind CSS">
-                <img src={tailwind} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+                <img
+                  src={tailwind}
+                  alt=""
+                  className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg androidPhones:m-2 androidPhones:p-2 lg:p-0 lg:my-0 lg:mx-2 align-middle "
+                />
               </p>
               <p className="cursor-pointer" title="SAAS">
-                <img src={scss} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+                <img
+                  src={scss}
+                  alt=""
+                  className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg androidPhones:m-2 androidPhones:p-2 lg:p-0 lg:my-0 lg:mx-2 align-middle "
+                />
               </p>
               <p className="cursor-pointer" title="CSS 3">
-                <img src={css} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+                <img
+                  src={css}
+                  alt=""
+                  className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg androidPhones:m-2 androidPhones:p-2 lg:p-0 lg:my-0 lg:mx-2 align-middle "
+                />
               </p>
               <p className="cursor-pointer" title="Yarn">
-                <img src={yarn} alt="" className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg mx-2 align-middle " />
+                <img
+                  src={yarn}
+                  alt=""
+                  className="max-w-full h-[72px] w-[72px] p-2 bg-white rounded-full shadow-lg androidPhones:m-2 androidPhones:p-2 lg:p-0 lg:my-0 lg:mx-2 align-middle "
+                />
               </p>
             </div>
           </div>

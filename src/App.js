@@ -11,9 +11,9 @@ const App = () => {
       <section className="relative">
         <Templates />
       </section>
-        <TemplateFeatures />
-        <ToTheTop />
-        <Footer />
+      <TemplateFeatures />
+      <ToTheTop />
+      <Footer />
     </div>
   );
 };
