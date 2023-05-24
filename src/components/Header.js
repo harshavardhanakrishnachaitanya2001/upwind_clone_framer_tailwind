@@ -4,6 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import logoDark from "../images/logo-dark.png";
 import originalLogo from "../images/logo.png";
 
+
 const Header = () => {
   const [logo, setLogo] = useState(originalLogo);
   const [bgColor, setBgColor] = useState("transparent");
@@ -14,10 +15,27 @@ const Header = () => {
   const [featuresHover, setFeaturesHover] = useState(false);
   const [supportHover, setSupportHover] = useState(false);
   const [iconClicked, setIconClicked] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  const checkScreenSize = () => {
+    if (window.innerWidth <= 640) {
+      setIsSmallScreen(true);
+      setBgColor("#fff");
+    } else {
+      setIsSmallScreen(false);
+    }
+  };
+
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (value) => {
-      if (value > 0) {
+      if (value > 0 || isSmallScreen) {
         setLogo(logoDark);
         setLinkColor("#000");
         setBgColor("#fff");
@@ -28,7 +46,7 @@ const Header = () => {
       }
     });
     return () => unsubscribe();
-  }, [scrollYProgress]);
+  }, [scrollYProgress, isSmallScreen]);
 
   return (
     <motion.div
@@ -44,7 +62,7 @@ const Header = () => {
         href="https://www.google.com"
         className="font-bold text-2xl py-1 leading-[68px]"
       >
-        <p className=" text-[#ff5e14] box-border cursor-pointer inline-block text-[24px] font-bold leading-68">
+        <p className="text-[#ff5e14] box-border cursor-pointer inline-block text-[24px] font-bold leading-68">
           <img src={logo} alt="logo" className="h-[24px] inline-block" />
         </p>
       </a>
@@ -52,16 +70,80 @@ const Header = () => {
       {/* Navigation links */}
       {/* mobile menu */}
       <div className=" androidPhones:space-x-2 py-1 lg:ml-2 mr-3 lg:space-x-4 flex items-center">
-        <div
+        <motion.div
           onClick={() => setIconClicked(!iconClicked)}
+         
           className=" space-y-1.5 items-end flex flex-col lg:hidden right-0 justify-center"
         >
           <span className="bg-black w-7 h-0.5"></span>
           <span className="bg-black w-7 h-0.5"></span>
           <span className="bg-black w-7 h-0.5"></span>
-        </div>
-        {iconClicked && (
-          <ul className={iconClicked?"androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm":"androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"}>
+        </motion.div>
+        {iconClicked? (
+          <ul className={iconClicked?" text-black androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm":"androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"}>
+            <motion.li
+              onMouseEnter={() => setHomeHover(true)}
+              onMouseLeave={() => setHomeHover(false)}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+              className="cursor-pointer"
+              style={{
+                color: homeHover ? "#fb663d" : linkColor,
+                transition: "color 0.2s ease-in-out",
+              }}
+            >
+              HOME
+            </motion.li>
+            <motion.li
+              onMouseEnter={() => setDemosHover(true)}
+              onMouseLeave={() => setDemosHover(false)}
+              onClick={() => {
+                document.getElementById("templatesSeciton").scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="cursor-pointer"
+              style={{
+                color: demosHover ? "#fb663d" : linkColor,
+                transition: "color 0.2s ease-in-out",
+              }}
+            >
+              DEMOS
+            </motion.li>
+            <motion.li
+              onMouseEnter={() => setFeaturesHover(true)}
+              onMouseLeave={() => setFeaturesHover(false)}
+              onClick={() => {
+                document.getElementById("featuresSection").scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="cursor-pointer"
+              style={{
+                color: featuresHover ? "#fb663d" : linkColor,
+                transition: "color 0.2s ease-in-out",
+              }}
+            >
+              FEATURE
+            </motion.li>
+            <motion.li
+              onMouseEnter={() => setSupportHover(true)}
+              onMouseLeave={() => setSupportHover(false)}
+              className="cursor-pointer"
+              style={{
+                color: supportHover ? "#fb663d" : linkColor,
+                transition: "color 0.2s ease-in-out",
+              }}
+            >
+              SUPPORT
+            </motion.li>
+          </ul>
+        ):(
+          <ul className={iconClicked?"bg-white text-black androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm":"androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"}>
             <motion.li
               onMouseEnter={() => setHomeHover(true)}
               onMouseLeave={() => setHomeHover(false)}
