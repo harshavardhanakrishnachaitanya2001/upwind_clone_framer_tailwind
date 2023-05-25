@@ -4,7 +4,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import logoDark from "../images/logo-dark.png";
 import originalLogo from "../images/logo.png";
 
-
 const Header = () => {
   const [logo, setLogo] = useState(originalLogo);
   const [bgColor, setBgColor] = useState("transparent");
@@ -17,6 +16,27 @@ const Header = () => {
   const [iconClicked, setIconClicked] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  const mobileMenuVariants = {
+    open: {
+      rotate: 45,
+      translateY: "4px",
+      transition: {
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      },
+    },
+    closed: {
+      rotate: 0,
+      translateY: "0px",
+      transition: {
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      },
+    },
+  };
+
   const checkScreenSize = () => {
     if (window.innerWidth <= 640) {
       setIsSmallScreen(true);
@@ -25,7 +45,6 @@ const Header = () => {
       setIsSmallScreen(false);
     }
   };
-
 
   useEffect(() => {
     checkScreenSize();
@@ -70,17 +89,39 @@ const Header = () => {
       {/* Navigation links */}
       {/* mobile menu */}
       <div className=" androidPhones:space-x-2 py-1 lg:ml-2 mr-3 lg:space-x-4 flex items-center">
-        <motion.div
+        <div
           onClick={() => setIconClicked(!iconClicked)}
-         
           className=" space-y-1.5 items-end flex flex-col lg:hidden right-0 justify-center"
         >
-          <span className="bg-black w-7 h-0.5"></span>
-          <span className="bg-black w-7 h-0.5"></span>
-          <span className="bg-black w-7 h-0.5"></span>
-        </motion.div>
-        {iconClicked? (
-          <ul className={iconClicked?" text-black androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm":"androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"}>
+          <motion.span
+            animate={
+              iconClicked
+                ? { rotate: 45, translateY: "6px" }
+                : { rotate: 0, translateY: "0px" }
+            }
+            className="bg-black w-7 h-0.5"
+          ></motion.span>
+          <motion.span
+            animate={iconClicked ? { opacity: 0 } : { opacity: 1 }}
+            className="bg-black w-7 h-0.5"
+          ></motion.span>
+          <motion.span
+            animate={
+              iconClicked
+                ? { rotate: -45 }
+                : { rotate: 0 }
+            }
+            className="bg-black w-7 h-0.5"
+          ></motion.span>
+        </div>
+        {iconClicked ? (
+          <ul
+            className={
+              iconClicked
+                ? "androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm"
+                : "androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"
+            }
+          >
             <motion.li
               onMouseEnter={() => setHomeHover(true)}
               onMouseLeave={() => setHomeHover(false)}
@@ -142,8 +183,14 @@ const Header = () => {
               SUPPORT
             </motion.li>
           </ul>
-        ):(
-          <ul className={iconClicked?"bg-white text-black androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm":"androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"}>
+        ) : (
+          <ul
+            className={
+              iconClicked
+                ? "bg-white text-black androidPhones:space-y-2 lg:space-y-0 lg:flex lg:space-x-8 font-semibold text-sm"
+                : "androidPhones:space-y-2 lg:space-y-0 androidPhones:hidden lg:flex lg:space-x-8 font-semibold text-sm"
+            }
+          >
             <motion.li
               onMouseEnter={() => setHomeHover(true)}
               onMouseLeave={() => setHomeHover(false)}
