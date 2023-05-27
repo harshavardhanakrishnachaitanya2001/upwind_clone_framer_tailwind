@@ -22,7 +22,7 @@ const iconVariant = {
 const Carosel = () => {
   return (
     // returning jsx
-    <div className=" h-[700px]   bg-backgroundImage">
+    <div className=" h-[700px] bg-backgroundImage">
       {/* Carosla container */}
       <div className=" w-full h-full">
         <header className=" bg-backgroundColor relative bg-opacity-80 text-[rgb(22, 28, 45)] mx-auto leading-6 mb-5 bg-backgroundColor w-full h-full">
@@ -39,10 +39,10 @@ const Carosel = () => {
                 alt=""
                 className="mx-auto h-20 w-20"
               />
-              <p className=" mt-8 font-semibold text-4xl">
+              <p className=" mt-8 font-semibold lg:text-4xl androidPhones:text-3xl androidPhones:px-1 lg:px-0">
                 Upwind - React Tailwind Landing Page Template
               </p>
-              <p className="mt-6 font-semibold text-base">
+              <p className="mt-6 font-semibold lg:text-base androidPhones:text-xl androidPhones:px-1 lg:px-0">
                 (Light & Dark + LTR & RTL Theme Available)
               </p>
             </div>
