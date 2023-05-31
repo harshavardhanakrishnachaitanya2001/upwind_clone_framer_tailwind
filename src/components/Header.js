@@ -16,27 +16,6 @@ const Header = () => {
   const [iconClicked, setIconClicked] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  const mobileMenuVariants = {
-    open: {
-      rotate: 45,
-      translateY: "4px",
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-      },
-    },
-    closed: {
-      rotate: 0,
-      translateY: "0px",
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-      },
-    },
-  };
-
   const checkScreenSize = () => {
     if (window.innerWidth <= 640) {
       setIsSmallScreen(true);
@@ -96,8 +75,8 @@ const Header = () => {
           <motion.span
             animate={
               iconClicked
-                ? { rotate: 45, translateY: "6px" }
-                : { rotate: 0, translateY: "0px" }
+                ? { rotate: 45, y:9,x:1 }
+                : { rotate: 0 }
             }
             className="bg-black w-7 h-0.5"
           ></motion.span>
@@ -108,7 +87,7 @@ const Header = () => {
           <motion.span
             animate={
               iconClicked
-                ? { rotate: -45 }
+                ? { rotate: -45,  y:-7, x:-1 }
                 : { rotate: 0 }
             }
             className="bg-black w-7 h-0.5"
