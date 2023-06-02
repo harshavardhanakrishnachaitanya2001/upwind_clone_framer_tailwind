@@ -13,7 +13,7 @@ const imageVariant = {
 };
 const Templates = () => {
   return (
-    <div className=" lg:mt-[160px] androidPhones:pt-[280px] lg:pt-0 text-center lg:w-[60%] androidPhones:w-96 mx-auto">
+    <div className=" lg:mt-[160px] androidPhones:pt-[280px] sm:pt-[200px] lg:pt-0 text-center lg:w-[60%] androidPhones:w-96 sm:w-10/12 mx-auto">
       <div className="h-[54px] px-3" id="templatesSeciton">
         <h2 className=" mb-2 text-center font-bold tracking-widest text-xl">
           TEMPLATE DEMOS

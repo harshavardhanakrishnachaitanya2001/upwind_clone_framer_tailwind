@@ -19,7 +19,7 @@ const Authentication = () => {
           AUTHENTICATION PAGES
         </h2>
       </div>
-      <div className="lg:flex w-full mx-auto lg:justify-center lg:items-end h-[340px]">
+      <div className="lg:flex w-full sm:space-y-10 mx-auto lg:justify-center lg:items-end h-[340px]">
         <div>
           <motion.img
             src={authentication}

@@ -58,7 +58,7 @@ const Header = () => {
     >
       <a
         href="https://www.google.com"
-        className="font-bold text-2xl py-1 leading-[68px]"
+        className="sm:pl-10 font-bold text-2xl py-1 leading-[68px]"
       >
         <p className="text-[#ff5e14] box-border cursor-pointer inline-block text-[24px] font-bold leading-68">
           <img src={logo} alt="logo" className="h-[24px] inline-block" />
@@ -67,10 +67,10 @@ const Header = () => {
 
       {/* Navigation links */}
       {/* mobile menu */}
-      <div className=" androidPhones:space-x-2 py-1 lg:ml-2 mr-3 lg:space-x-4 flex items-center">
+      <div className="androidPhones:space-x-2 py-1 lg:ml-2 androidPhones:mr-3 sm:mr-10 lg:space-x-4 flex items-center">
         <div
           onClick={() => setIconClicked(!iconClicked)}
-          className=" space-y-1.5 items-end flex flex-col lg:hidden right-0 justify-center"
+          className=" w-full space-y-1.5 items-end flex flex-col lg:hidden right-0 justify-center"
         >
           <motion.span
             animate={
