@@ -16,15 +16,15 @@ const hoverVariants = {
 const TemplateFeatures = () => {
   return (
     <section
-      className="lg:py-[100px] androidPhones:py-10 relative"
+      className=" md:py-0 lg:py-[100px] androidPhones:py-10 relative"
       id="featuresSection"
     >
-      <div className="text-center px-3 h-14">
+      <div className="text-center px-3">
         <h5 className="text-center font-semibold text-xl mb-2 tracking-wider">
           TEMPLATE FEATURES
         </h5>
       </div>
-      <div className="lg:grid lg:grid-cols-3 gap-x-6 items-center lg:w-[60%] androidPhones:w-[96%] mx-auto">
+      <div className="md:grid md:grid-cols-2 sm:w-[85%] lg:grid-cols-3 gap-x-6 items-center lg:w-[83%] androidPhones:w-[96%] mx-auto">
         <motion.div
           variants={hoverVariants}
           whileHover="addShadow"
@@ -48,7 +48,7 @@ const TemplateFeatures = () => {
         <motion.div
           variants={hoverVariants}
           whileHover="addShadow"
-          className="flex mt-6 pt-2 w-full rounded-lg border"
+          className="flex mt-6 pt-2 androidPhones:px-3 w-full rounded-lg border"
         >
           <div className="flex items-center w-full p-3 rounded-lg">
             <div className="text-center w-10 h-10 mr-3">

@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import ToTheTop from "./components/ToTheTop";
 const App = () => {
   return (
-    <div className="">
+    <div>
       <Carosel />
       <section className="relative">
         <Templates />

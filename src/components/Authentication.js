@@ -14,39 +14,39 @@ const imageVariants = {
 const Authentication = () => {
   return (
     <div id="authenticationSection mx-auto">
-      <div className="h-[78px] px-3 androidPhones:my-10 lg:my-0">
-        <h2 className=" mb-2 text-center font-bold tracking-widest text-xl">
+      <div className=" lg:h-[78px] px-3 androidPhones:py-10 lg:py-0 md:w-screen lg:w-auto">
+        <h2 className=" mb-2 androidPhones:mb-0 text-center font-bold tracking-widest text-xl">
           AUTHENTICATION PAGES
         </h2>
       </div>
-      <div className="lg:flex w-full sm:space-y-10 mx-auto lg:justify-center lg:items-end h-[340px]">
-        <div>
+      <div className="md:gap-y-10 md:flex md:w-screen md:flex-wrap lg:w-full sm:space-y-10 md:space-y-0 mx-auto lg:items-end lg:h-[340px]">
+        <div className="md:pr-3 lg:pr-0">
           <motion.img
             src={authentication}
             variants={imageVariants}
             whileHover="moveUp"
             alt=""
-            className="rounded-md h-[244px] lg:w-[356px] androidPhones:w-full androidPhones:px-0 lg:px-3"
+            className="rounded-md h-[244px] md:w-full androidPhones:w-full androidPhones:px-0 lg:px-3"
           />
           <p className="mt-6 font-semibold text-center"> LOGIN </p>
         </div>
-        <div>
+        <div className="md:pr-3 lg:pr-0">
           <motion.img
             src="https://shreethemes.in/upwind_react/assets/images/demo/signup.png"
             variants={imageVariants}
             whileHover="moveUp"
             alt=""
-            className=" h-[244px] lg:w-[356px] androidPhones:w-full androidPhones:px-0 lg:px-3 rounded-md"
+            className="  h-[244px] md:w-full androidPhones:w-full androidPhones:px-0 lg:px-3 rounded-md"
           />
           <p className="mt-6 font-semibold text-center"> SIGN UP </p>
         </div>
-        <div>
+        <div className="md:mx-44 lg:mx-0">
           <motion.img
             src="https://shreethemes.in/upwind_react/assets/images/demo/reset.png"
             variants={imageVariants}
             whileHover="moveUp"
             alt=""
-            className=" h-[244px] androidPhones:w-full lg:w-[356px] androidPhones:px-0 lg:px-3 rounded-md"
+            className="h-[244px] md:w-full androidPhones:w-full lg:w-full androidPhones:px-0 lg:px-3 rounded-md"
           />
           <p className="mt-6 font-semibold text-center"> RESET PASSWORD </p>
         </div>

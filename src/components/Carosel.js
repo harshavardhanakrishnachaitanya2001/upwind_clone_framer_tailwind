@@ -42,7 +42,7 @@ const Carosel = () => {
               <p className=" mt-8 font-semibold lg:text-4xl androidPhones:text-3xl androidPhones:px-1 lg:px-0">
                 Upwind - React Tailwind Landing Page Template
               </p>
-              <p className="mt-6 font-semibold lg:text-base androidPhones:text-xl androidPhones:px-1 lg:px-0">
+              <p className="mt-6 androidPhones:px-2 font-semibold lg:text-base androidPhones:text-xl androidPhones:px-1 lg:px-0">
                 (Light & Dark + LTR & RTL Theme Available)
               </p>
             </div>
@@ -50,7 +50,7 @@ const Carosel = () => {
 
           {/* Concepts links */}
           <div className="relative lg:pb-[50px]">
-            <div className="androidPhones:border-b lg:border-none androidPhones:px-3 flex-wrap lg:px-0 androidPhones:py-6 lg:py-0 container lg:pb-[100px] flex mx-auto justify-center w-full absolute text-center top-0 right-0 left-0">
+            <div className="androidPhones:border-b md:border-none md:py-0 lg:border-none androidPhones:px-3 flex-wrap lg:px-0 androidPhones:py-6 lg:py-0 container lg:pb-[100px] flex mx-auto justify-center w-full absolute text-center top-0 right-0 left-0">
               <p className="cursor-pointer" title="React JS">
                 <img
                   src={react}
